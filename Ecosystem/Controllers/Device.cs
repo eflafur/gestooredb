@@ -177,6 +177,7 @@ namespace Ecosystem.Controllers
                 return Ok(node);
             }
 
+
             foreach (JProperty property in obj["data"])
             {
                 var alias = property.Name.Split('.').Count() == 2 ? $"{property.Name} {property.Name.Split('.')[0]}_{property.Name.Split('.')[1]}" : null;
@@ -188,6 +189,8 @@ namespace Ecosystem.Controllers
                     isParam = true;
                 }
             }
+
+
             Params = isParam ? string.Join(" and ", paramsCriteria.Select(k => string.Format("{0}={1}", k.Key, k.Value))) : "0=0";
 
             var dbModel = _config.GetSection("dbrelation").Get<Dictionary<string, List<string>>>();

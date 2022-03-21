@@ -81,7 +81,7 @@ namespace Ecosystem.Controllers
         [Route("savejsonfile")]
         public IActionResult SaveJsonFile(JsonElement model)
         {
-            string appsettingspath = @"C:\Project\IOTManager\src\app\Model\datamodel.json";
+            string appsettingspath = @"C:\projecttemp\Ecosystem\Ecosystem\ClientApp\src\app\Model\datamodel.json";
             //     var jsonsetting = JObject.Parse(model.ToString());
             System.IO.File.WriteAllText(appsettingspath, model.ToString());
             return Ok("OK");
