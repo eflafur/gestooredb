@@ -1,0 +1,63 @@
+.main {
+    width: 600px;
+    border: 3px solid red;
+    border-radius: 10px;
+    height: 300px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    /* display: flex; */
+    /* justify-content: center;
+	align-items: center; */
+}
+
+.middle {
+    width: 400px;
+    height: 200px;
+    /* display: flex; */
+    /* justify-content: center;
+	align-items: center; */
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.centro {
+    height: 50%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.centro div {
+    height: 60%;
+}
+
+label {
+    float: left;
+}
+
+input {
+    float: right;
+}
+
+.action{
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 10px 0;
+    height: 50px;
+}
+
+.action button {
+    width: 75px;
+}

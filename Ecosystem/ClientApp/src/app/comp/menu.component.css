@@ -1,0 +1,36 @@
+.border {
+  border: 1px solid blue !important;
+  padding: 2px 2px 2px 2px;
+  height: 70%;
+  overflow-y: auto;
+}
+
+.submenu {
+  margin-bottom: 1px;
+  background-color: cornflowerblue;
+  height: 35px;
+}
+
+.icon {
+  width: 25%;
+}
+
+.title {
+  width: 75%;
+}
+
+.open {
+  width: 86%;
+  font-size: small;
+  display: inline-block;
+}
+
+.empty {
+  width: 14%;
+  background-color: green;
+  display: inline-block;
+}
+
+.open div{
+  border: 1px solid darkgreen;
+}

@@ -1,0 +1,17 @@
+div {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin:  30px 30px 30px 30px; */
+}
+
+#svg{ margin: 2% 0 2% 0 ;}
+
+#name{
+    font-size:20px;
+}
+text{
+    font-size: 15px;
+    display: block;
+}

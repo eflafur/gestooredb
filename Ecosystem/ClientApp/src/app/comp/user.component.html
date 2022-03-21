@@ -1,0 +1,33 @@
+<div id="status" [class]="report=='yes'?'ok':report=='no'?'ko':''" *ngIf="report=='no' || report=='yes'">
+    <span>{{result}}</span>
+</div>
+
+<div class="select">
+    <input type="text" list="tablelist" (change)="getTable($event)" #select>
+    <datalist id="tablelist">
+        <option *ngFor="let item of tables">{{item.service}}</option>
+    </datalist>
+</div>
+
+<div *ngIf="visible" class="container">
+    <div class="containerin">
+        <h2>Fields</h2>
+        <div cdkDropList [cdkDropListData]="table" [cdkDropListConnectedTo]="[serviceList]" class="list in"
+            (cdkDropListDropped)="drop($event)" #tableList="cdkDropList">
+            <div class="box" *ngFor="let item of table" cdkDrag>{{item}}</div>
+        </div>
+    </div>
+
+    <div class="containerout">
+        <h2>{{model}}</h2>
+        <div cdkDropList #serviceList="cdkDropList" [cdkDropListData]="service" class="list out"
+            (cdkDropListDropped)="drop($event)" [cdkDropListConnectedTo]="[tableList]">
+            <div class="box" *ngFor="let item of service" cdkDrag>{{item}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="action">
+    <button class="btn btn-danger" (click)="submit('temp')">Esegui</button>
+    <button class="btn btn-danger" (click)="submit()">Salva preferenze sul db</button>
+</div>

@@ -1,0 +1,126 @@
+  <div id="select">
+    <input
+      type="text"
+      list="servicelist"
+      #serviceref
+      class="form-control name"
+      (change)="itemSelected($event)"
+      placeholder="select service"
+    />
+    <datalist id="servicelist">
+      <option *ngFor="let item of service.servicemodel" [value]="item.service">
+        {{ item.service }}
+      </option>
+    </datalist>
+  </div>
+
+  <div id="criteria">
+    <form [formGroup]="formService">
+      <div *ngFor="let item of service.servicemodel[index].field">
+        <input
+          type="text"
+          class="form-control name"
+          placeholder="{{ item }}"
+          formControlName="{{ item }}"
+        />
+      </div>
+    </form>
+  </div>
+
+  <div class="tableservice" *ngIf="visible == true">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" *ngFor="let item of keys">{{ item }}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of responseItem" #tbodyref>
+          <td *ngFor="let item of row">{{ item }}</td>
+          <td width="100"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="loadpage" >
+    <div id="action">
+      <button class="btn btn-primary" (click)="submit()">
+        <i class="fa fa-arrow-circle-o-right"></i>
+      </button>
+    </div>
+    <div class="pagination" *ngIf="visible == true">
+      <ul >
+        <li href="#" (click)="getPage(1)"><<</li>
+        <li *ngFor="let item of pageList" (click)="submit($event)"  href="#" [class]="item.isSelected?'isselected':''"><a> {{item.index}}</a> </li>
+        <li href="#" (click)="getPage()">>></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+<!--  aggiunge riga vuota-->
+ <!--  <div id="addrow">
+      <button class="btn btn-primary" (click)="addRow()">
+        <i class="fa fa-arrow-circle-o-right"></i>
+      </button>
+    </div>
+   <div class="tableservice" *ngIf="visible == true">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" *ngFor="let item of keys">{{item}}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of responseItem" #tbodyref>
+          <td *ngFor="let item of row">{{ item }}</td>
+          <td width="100"></td>
+        </tr>
+        <tr *ngFor="let item1 of servicerowadded">
+          <td></td>
+          <td>
+            <input
+              type="text"
+              class="form-control name"
+              placeholder="name"
+              [(ngModel)]="name"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="form-control name"
+              placeholder="name"
+              [(ngModel)]="idenv"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="form-control name"
+              placeholder="name"
+              [(ngModel)]="type"
+            />
+          </td>
+          <td>
+            <input
+              type="text"
+              class="form-control name"
+              placeholder="name"
+              [(ngModel)]="typename"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="addrow">
+      <button class="btn btn-primary" (click)="addRow()">
+        <i class="fa fa-arrow-circle-o-right"></i>
+      </button>
+    </div>
+  </div> -->

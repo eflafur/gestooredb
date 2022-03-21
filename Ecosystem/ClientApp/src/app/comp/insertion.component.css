@@ -1,0 +1,80 @@
+.main {
+    padding: 10px 10px 0 10px;
+}
+
+#select {
+    float: right;
+    width: 350px;
+    background: red;
+}
+
+#criteria {
+    clear: right;
+    padding: 20px 0 0 0;
+}
+
+#criteria form div {
+    display: inline-block;
+    width: 200px;
+    clear: right;
+    margin: 10px 10px 10px 10px;
+}
+
+.action {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#status{
+    width: 20%;
+    height: 13%;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    border-radius: 7px;
+    margin: 0 2px 2px 0;
+    line-height: 15px;
+    padding: 1px 1px 1px 1px;
+    white-space: pre-line;
+    vertical-align: middle;
+}
+#status span{
+    font-size: small;
+}
+
+.action button {
+    width: 70px;
+}
+
+.ok {
+    -webkit-animation: fadeinout 10s linear forwards;
+    animation: fadeinout 10s linear forwards;
+    background: green;
+}
+
+.ko {
+    -webkit-animation: fadeinout 20s linear forwards;
+    animation: fadeinout 20s linear forwards;
+    background: red;
+}
+
+@-webkit-keyframes fadeinout {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinout {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,25 @@
+<div id="status" [class]="report=='yes'?'ok':report=='no'?'ko':''" *ngIf="report=='no' || report=='yes'">
+    <span>{{result}}</span>
+</div>
+
+<div id="select">
+    <input type="text" list="servicelist" #serviceref class="form-control name" (change)="itemSelected($event)"
+        placeholder="select service" />
+    <datalist id="servicelist">
+        <option *ngFor="let item of serviceList" [value]="item.service">
+            {{ item.service }}
+        </option>
+    </datalist>
+</div>
+
+<div id="criteria">
+    <form [formGroup]="formService">
+        <div *ngFor="let item of serviceList[index].field">
+            <input type="text" class="form-control name" placeholder="{{ item }}" formControlName="{{ item }}" />
+        </div>
+    </form>
+</div>
+
+<div class="action">
+    <button class="btn btn-primary" (click)="getSelection()">Esegui</button>
+</div>

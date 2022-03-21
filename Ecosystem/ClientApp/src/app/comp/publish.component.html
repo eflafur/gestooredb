@@ -1,0 +1,30 @@
+<!-- <svg>
+  <g>
+    <rect x="0" y="0" width="100" height="100" [attr.fill]="fillColor" (click)="changeColor()" />
+    <text x="120" y="50">click the rectangle to change the fill color</text>
+  </g>
+</svg> -->
+<!-- 
+<svg height="210" width="500">
+  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+</svg> -->
+
+ <div>
+  <svg width="170" height="250" class="rect" *ngFor="let item of datamodel" id="svg">
+      <rect width="170" height="250" x1="150" y1="330" style="fill:white;stroke-width:3;stroke:rgb(0,0,0)" />
+    <text height="10%" x="80" y="30" dominant-baseline="middle" text-anchor="middle" id="name">{{item.service}}</text>
+    <text height="10%" x="0" y="40" dominant-baseline="middle" text-anchor="middle" >
+      <tspan x="85" dy="20" *ngFor="let subitem of item.field;let ind=index;">{{subitem}}</tspan>
+    </text>
+  </svg>
+</div> 
+
+
+<svg height="100" width="100">
+  <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+
+<svg height="210" width="500">
+  <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+</svg>
+

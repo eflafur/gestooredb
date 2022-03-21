@@ -1,0 +1,7 @@
+[{"service":"users","field":["id","nome","indirizzo","eta"],"view":"false","index":0,"tablefield":["id","nome","indirizzo","eta"]},
+{"service":"provider","field":["id","nome","area","point"],"view":"false","index":1,"tablefield":["id","nome","area","point"]},
+{"service":"service","field":["id","nome","categoria","provider_id"],"view":"false","index":2,"tablefield":["id","nome","categoria","provider_id","provider_nome","provider_area","provider_point"]},
+{"service":"app","field":["id","nome","port","ip","service_id"],"view":"false","index":3,"tablefield":["id","nome","port","ip","service_id","service_nome","service_categoria","service_provider_id"]},
+{"service":"datacenter","field":["id","nome","sito","superficie"],"view":"false","index":4,"tablefield":["id","nome","sito","superficie"]},
+{"service":"app_datacenter","field":["id","app_id","datacenter_id"],"view":"false","index":5,"tablefield":["id","app_id","datacenter_id","app_nome","app_port","app_ip","app_service_id","datacenter_nome","datacenter_sito","datacenter_superficie"]},
+{"service":"connection","field":["id","speed","nome","cat","users_id"],"view":"false","index":6,"tablefield":["id","speed","nome","cat","users_id","users_nome","users_indirizzo","users_eta"]}]

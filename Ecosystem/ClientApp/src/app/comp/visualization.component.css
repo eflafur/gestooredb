@@ -1,0 +1,101 @@
+#select {
+  width: 50%;
+  margin-left: 25%;
+}
+
+#select input {
+  text-align: center;
+  background-color: mediumaquamarine;
+}
+
+#criteria div {
+  display: inline-block;
+  width: 32%;
+  padding: 1%;
+}
+
+.tableservice {
+  height: 47%;
+  margin: 0 0 0 0;
+  overflow-y: scroll !important;
+  position: relative;
+}
+
+#addrow {
+  float: right;
+  position: relative;
+  bottom: 60px;
+}
+
+#plus {
+  width: 20px;
+}
+
+/* .loadpage div{
+  display: inline-block;
+}
+
+.pagination {
+  position: relative !important;
+  left: 70%;
+} */
+
+/* .loadpage {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 83.5%;
+  height: 5%;
+  bottom: 3%;
+  left: 14.7%;
+} */
+
+.loadpage  {
+  position: absolute;
+  background: darkgrey;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  white-space: nowrap;
+}
+
+#action {
+  float: left;
+}
+
+.pagination {
+  float: right;
+}
+
+li {
+  display: inline;
+  font-size: 20px;
+  color: green;
+  padding: 0 4px 0 0;
+  cursor: pointer;
+}
+
+li a {
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.isselected {
+  pointer-events: none;
+}
+
+.notselected {
+  background-color: greenyellow;
+}
+
+#action button {
+  width: 60px;
+}
+
+::ng-deep .mat-dialog-container {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px !important;
+  max-width: fit-content !important;
+}

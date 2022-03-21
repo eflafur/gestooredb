@@ -1,0 +1,68 @@
+<!-- <div class="main">
+  <div id="select">
+    <input
+      type="text"
+      list="servicelist"
+      #serviceref
+      class="form-control name"
+      (change)="itemSelected($event)"
+      (click)="resetText('service')"
+      placeholder="select service"
+    />
+    <datalist id="servicelist">
+      <option *ngFor="let item of serviceList" [value]="item.service">
+        {{ item.service }}
+      </option>
+    </datalist>
+  </div>
+
+  <div class="formservice" >
+    <form [formGroup]="formService">
+      <div class="form-group name" *ngIf="serviceList[1].view ||  serviceList[2].view ">
+        <input formControlName="name" type="text" class="form-control name" placeholder="name" />
+      </div>
+      <div class="form-group type" *ngIf="serviceList[1].view">
+        <input formControlName="type" type="text" class="form-control" placeholder="type" />
+      </div>
+      <div class="form-group idenv" *ngIf="serviceList[1].view">
+        <input formControlName="idenv" type="text" class="form-control" placeholder=" ID Env" />
+      </div>
+       <div class="form-group type" *ngIf="serviceList[2].view">
+        <input formControlName="type_id" type="text" class="form-control" placeholder="type Id" />
+      </div>
+      <div class="form-group type" *ngIf="serviceList[2].view">
+        <input formControlName="service" type="text" class="form-control" placeholder="service" />
+      </div>
+          <div class="form-group name" *ngIf="serviceList[0].view">
+        <input formControlName="firstname" type="text" class="form-control name" placeholder="firstname" />
+      </div>
+      <div class="form-group idservice" *ngIf="serviceList[0].view">
+        <input formControlName="lastname" type="text" class="form-control" placeholder="lastname"/>
+      </div>
+      <div class="form-group type" *ngIf="serviceList[0].view">
+        <input formControlName="username" type="text" class="form-control" placeholder="username" />
+      </div>
+      <div class="form-group idenv" *ngIf="serviceList[0].view">
+        <input formControlName="password" type="text" class="form-control" placeholder=" password" />
+      </div>
+      <div class="form-group name" *ngIf="serviceList[3].view">
+        <input formControlName="routeto" type="text" class="form-control name" placeholder="route to" />
+      </div>
+      <div class="form-group idservice" *ngIf="serviceList[3].view">
+        <input formControlName="routefrom" type="text" class="form-control" placeholder="route from"/>
+      </div>
+      <div class="form-group idservice" *ngIf="serviceList[1].view">
+        <input  formControlName="id_servicetype" type="text" class="form-control" placeholder="username" #servicetyperef list="servicetype" (click)="resetText('type')"/>
+        <datalist  id="servicetype" type="text" class="form-control" [value]="item.id" placeholder="id service">
+          <option *ngFor="let item of serviceid">
+            {{item.name}}
+          </option>
+        </datalist>
+      </div>
+    </form>
+  </div>
+  <div class="submit" *ngIf="view">
+    <button class="btn-info" (click)="onSubmitSp()">Submit</button>
+  </div>
+</div>  -->
+

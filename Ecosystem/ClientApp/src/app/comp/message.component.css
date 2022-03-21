@@ -1,0 +1,213 @@
+/* REPORT */
+#status {
+    width: 20%;
+    height: 13%;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    border-radius: 7px;
+    margin: 0 2px 2px 0;
+    line-height: 15px;
+    padding: 1px 1px 1px 1px;
+    white-space: pre-line;
+    vertical-align: middle;
+}
+
+#status span {
+    font-size: small;
+}
+
+.ok {
+    -webkit-animation: fadeinout 10s linear forwards;
+    animation: fadeinout 10s linear forwards;
+    background: green;
+}
+
+.ko {
+    -webkit-animation: fadeinout 20s linear forwards;
+    animation: fadeinout 20s linear forwards;
+    background: red;
+}
+
+/* REPORT */
+
+#setter {
+    float: left;
+    width: 70%;
+    height: 75%;
+    border: 2px solid #ff0000;
+    position: relative;
+    overflow-y: auto;
+}
+
+ #tablename, #mandatory {
+    height: 30%;
+    padding: 2% 2% 2% 2%;
+}
+
+#tablename div, #mandatory div {
+    display: inline-block;
+    height: 60%;
+}
+
+#tablename #content {
+    width: 80%;
+}
+
+#tablename #content label {
+    width: 25%;
+    vertical-align: middle;
+    line-height: 80%;
+    font-size: 20px
+}
+
+#tablename #content input  {
+    width: 75% !important;
+    height: 50%;
+}
+
+#tablename #action {
+    width: 20%;
+    height: 80%;
+}
+
+#tablename #action button {
+    width: 80%;
+    margin-left: 20%;
+    height: 45%;
+}
+
+
+/*#mandatory div label {
+    width: 20%;
+    vertical-align: middle;
+    line-height: 80%;
+    font-size: 15px;
+}
+
+ #mandatory div input, #mandatory div select  {
+    width: 75% !important;
+    height: 30%;
+}
+
+#mandatory #name {
+    width: 43%;
+}
+
+#mandatory #type {
+    width: 43%;
+}
+
+#mandatory #length {
+    width: 14%;
+}
+#mandatory #length label{
+    width: 50% !important;
+}
+#mandatory #length input  {
+    width: 50% !important;
+} */
+
+
+#preview {
+    float: right;
+    height: 70%;
+}
+
+form {
+    height: 100%;
+}
+
+form div {
+    padding: 2px 2px 2px 2px;
+    height: 23% !important;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+#name {
+    width: 50%;
+}
+
+#type {
+    width: 30%;
+}
+
+#length {
+    width: 20%;
+}
+
+#mandatory div label {
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+form div div input, #mandatory div select {
+    width: 80% !important;
+}
+
+#length label {
+    width: 40% !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+#mandatory div input[type=number] {
+    width: 50% !important;
+}
+
+#optional1 div {
+    text-align: center;
+    width: 33%;
+    height: 50% !important;
+}
+
+form div div label {
+    width: 100px;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+input[type=checkbox] {
+    width: 25px;
+    height: 25px;
+}
+
+#optional2 div {
+    width: 50%;
+}
+
+#optional2 div {
+    width: 50%;
+}
+
+#foreign{
+    width: 70%;
+    margin: 0 auto;
+}
+
+form button {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 100px;
+}
+
+#preview {
+    padding: 0 0 0  10px;
+    width: 30%;
+}
+
+#submit {
+    clear: both;
+    bottom: 0;
+    position: absolute;
+}  

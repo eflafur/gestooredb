@@ -1,0 +1,86 @@
+<div id="status" [class]="report=='yes'?'ok':report=='no'?'ko':''" *ngIf="report=='no' || report=='yes'">
+  <span>{{result}}</span>
+</div>
+
+
+<div id="setter">
+  <div *ngIf="!istablename" id="tablename">
+    <div id="content">
+      <label for="tabella">Nome tabella</label>
+      <input type="text" [(ngModel)]="tablename" name="tabella">
+    </div>
+    <div id="action">
+      <button class="btn btn-primary" (click)="gettablename()">Esegui</button>
+    </div>
+  </div>
+
+  <form [formGroup]="formCreateTable" *ngIf="istablename">
+    <div id="mandatory">
+      <div id="name">
+        <label for="name">name</label>
+        <input type="text" formControlName="name">
+      </div>
+      <div id="type">
+        <label for="type">type</label>
+        <select id="type" formControlName="type" (change)="gettype()">
+          <option *ngFor="let item of  types" [value]="item">{{item}}</option>
+        </select>
+      </div>
+      <div id="length">
+        <label for="vardim">Length</label>
+        <input type="number" formControlName="vardim">
+      </div>
+    </div>
+    <div id="optional1">
+      <div id="nullable">
+        <label for="nullable">Nullable</label>
+        <input type="checkbox" formControlName="nullable">
+      </div>
+      <div id="primary">
+        <label for="primary">Primary Key</label>
+        <input type="checkbox" formControlName="primary" id="primary">
+      </div>
+      <div id="sequencial">
+        <label for="serial">Sequencial</label>
+        <input type="checkbox" formControlName="serial">
+      </div>
+    </div>
+
+    <div id="optional2">
+      <div class="datenow">
+        <label for="datenow">Date Now</label>
+        <input type="checkbox" formControlName="datenow">
+      </div>
+      <div class="default">
+        <label for="default">Default Value</label>
+        <input type="text" formControlName="default" *ngIf="!isBool&&!isInt">
+        <input type="number" name="quantity" min="0" max="1" formControlName="default" *ngIf="isBool">
+        <input type="number" name="quantity" min="0" formControlName="default" *ngIf="isInt">
+      </div>
+      <div class="unique">
+        <label for="unique">Unique</label>
+        <input type="checkbox" formControlName="unique">
+      </div>
+    </div>
+
+    <div id="foreign">
+      <input type="text" list="foreignlist" class="form-control name" placeholder="select service"
+        formControlName="foreign" />
+      <datalist id="foreignlist">
+        <option *ngFor="let item of datamodel" [value]="item.service">
+          {{ item.service}}
+        </option>
+      </datalist>
+    </div>
+
+    <button class="add btn btn-primary" (click)="callAdd()">Add</button>
+  </form>
+</div>
+
+<div id="preview">
+  {{table}}
+</div>
+
+<div id="submit">
+  <button class="btn btn-primary" (click)="submit()" #sub>Submit</button>
+</div>

@@ -1,0 +1,14 @@
+<app-login (authenticate)="getAuthenticate($event)" *ngIf="!isAuthenticate"></app-login>
+
+<div class="top" *ngIf="isAuthenticate">
+  <div class="menu">
+    <app-menu ($setMenu)="SwitchPage($event)"></app-menu>
+  </div>
+
+  <div class="body">
+    <div class="title">
+      <app-container [item]="title"></app-container>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
